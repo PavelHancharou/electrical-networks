@@ -1,4 +1,4 @@
-package by.hancharou.dbcp;
+package by.hancharou.electricalnetworks.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

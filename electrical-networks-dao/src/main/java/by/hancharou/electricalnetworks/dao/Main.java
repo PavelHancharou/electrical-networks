@@ -1,12 +1,9 @@
-package by.hancharou.start;
+package by.hancharou.electricalnetworks.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import by.hancharou.dbcp.ConnectionManager;
-
 
 public class Main {
 	private Connection connection;
