@@ -21,7 +21,8 @@
 		<project.version>0.0.1-SNAPSHOT</project.version>
 		<junit.version>3.8.1</junit.version>
 		<servlet.version>3.1.0</servlet.version>
-		<mysqlconnector.version>6.0.6</mysqlconnector.version>
+		<!-- MySQL connector with version 6 - do not work! Never use it!!! -->
+		<mysqlconnector.version>5.1.39</mysqlconnector.version>
 		<mavencompiler.version>3.6.1</mavencompiler.version>
 	</properties>
 

@@ -10,6 +10,7 @@ public class Main {
 	private PreparedStatement pStatement;
 	private ResultSet resultSet;
 	
+	//DELETE THIS METHOD IF HE DO NOT USE
 	public boolean accauntIsExist(String email, String password) {
 		boolean isExist = false;
 		try{

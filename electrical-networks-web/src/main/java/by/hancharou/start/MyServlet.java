@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import by.hancharou.electricalnetworks.dao.Main;
 
+//import by.hancharou.electricalnetworks.dao.Main;
+
 public class MyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -18,12 +20,16 @@ public class MyServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
-		if(email.equals("test@gmail.com") && password.equals("123")) {
-			Main main = new Main();
-			main.searchAllTables();
-		} else {
-			response.sendRedirect("/electrical-networks/index.html");
-		}
+		Main main = new Main();
+		main.searchAllTables();
+		System.out.println(email + " - " + password);
+		
+//		if(email.equals("test@gmail.com") && password.equals("123")) {
+//			Main main = new Main();
+//			main.searchAllTables();
+//		} else {
+//			response.sendRedirect("/electrical-networks/index.html");
+//		}
 		
 //		Main main = new Main();
 //		boolean isExist = main.accauntIsExist(email, password);
