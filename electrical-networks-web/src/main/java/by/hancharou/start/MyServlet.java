@@ -18,15 +18,22 @@ public class MyServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
-		Main main = new Main();
-		boolean isExist = main.accauntIsExist(email, password);
-		if(isExist) {
-			response.sendRedirect("/electrical-networks/WEB-INF/second-page.html");
-//			ServletContext context= getServletContext();
-//			RequestDispatcher rd= context.getRequestDispatcher("/second-page.html");
-//			rd.forward(request, response);
-		}else {
+		if(email.equals("test@gmail.com") && password.equals("123")) {
+			Main main = new Main();
+			main.searchAllTables();
+		} else {
 			response.sendRedirect("/electrical-networks/index.html");
 		}
+		
+//		Main main = new Main();
+//		boolean isExist = main.accauntIsExist(email, password);
+//		if(isExist) {
+//			response.sendRedirect("/electrical-networks/WEB-INF/second-page.html");
+////			ServletContext context= getServletContext();
+////			RequestDispatcher rd= context.getRequestDispatcher("/second-page.html");
+////			rd.forward(request, response);
+//		}else {
+//			response.sendRedirect("/electrical-networks/index.html");
+//		}
 	}
 }

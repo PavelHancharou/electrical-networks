@@ -27,4 +27,21 @@ public class Main {
 		}
 		return isExist;
 	}
+	
+	public void searchAllTables() {
+		try{
+			connection = ConnectionManager.getManager().getConnection();
+			pStatement = connection.prepareStatement("select * from tbl_ps;");
+			resultSet = pStatement.executeQuery();
+			
+			while (resultSet.next()) {
+				System.out.println(resultSet.getLong(1) + " - " + resultSet.getString(2));
+				//if(email.equals(resultSet.getString(2)) && password.equals(resultSet.getString(3))) {isExist=true;}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnectionManager.getManager().closeDbResources(connection, pStatement, resultSet);
+		}
+	}
 }

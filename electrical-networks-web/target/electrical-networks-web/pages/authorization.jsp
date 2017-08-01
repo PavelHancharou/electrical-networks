@@ -18,12 +18,12 @@
 		
 		<section id="photo_central_section">
 			<article id="auto_registr">
-				<form action="#" method="POST">
+				<form action="my-servlet" method="POST">
 					Имя пользователя: <br />
-					<input name="text" name="name" value="" size="40"></textarea> <br />
+					<input name="text" name="name" value="" size="40" /> <br />
 					Пороль: <br />
-					<input type="password" name="password" value="" size="40"/> <br />
-					<input type="checkbox" name="remember" value="Запомнить">Запомнить меня
+					<input type="password" name="password" value="" size="40" /> <br />
+					<input type="checkbox" name="remember" value="Запомнить" />Запомнить меня
 					<input type="submit" value="Войти" />
 				</form>
 			</article>
