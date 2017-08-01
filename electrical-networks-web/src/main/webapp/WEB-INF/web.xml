@@ -4,14 +4,88 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 
-	<display-name>Archetype Created Web Application</display-name>
+	<display-name>electrical-networks</display-name>
+
+	<resource-ref>
+		<description>DB Connection</description>
+		<res-ref-name>jdbc/electrical-networks</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
 
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<servlet>
+		<servlet-name>IndexPage</servlet-name>
+		<jsp-file>/pages/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexPage</servlet-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AuthorizationPage</servlet-name>
+		<jsp-file>/pages/authorization.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AuthorizationPage</servlet-name>
+		<url-pattern>/authorization.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HomePage</servlet-name>
+		<jsp-file>/pages/homepage.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomePage</servlet-name>
+		<url-pattern>/homepage.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TablesPage</servlet-name>
+		<jsp-file>/pages/tables.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TablesPage</servlet-name>
+		<url-pattern>/tables.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>IncludeHeader</servlet-name>
+		<jsp-file>/pages/include/header.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IncludeHeader</servlet-name>
+		<url-pattern>/include/header.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>IncludeNav</servlet-name>
+		<jsp-file>/pages/include/nav.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IncludeNav</servlet-name>
+		<url-pattern>/include/nav.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>IncludeFooter</servlet-name>
+		<jsp-file>/pages/include/footer.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IncludeFooter</servlet-name>
+		<url-pattern>/include/footer.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>my-servlet</servlet-name>
+		<servlet-class>by.hancharou.start.MyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>my-servlet</servlet-name>
+		<url-pattern>/my-servlet</url-pattern>
+	</servlet-mapping>
 </web-app>
